@@ -5,6 +5,9 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +18,7 @@ import com.example.customchatbot.Constants.OPEN_SEARCH
 import com.example.customchatbot.Constants.RECEIVE_ID
 import com.example.customchatbot.Constants.SEND_ID
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,10 +33,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         recyclerView()
-
+        showFragment()
         clickEvents()
 
-        //val musername = intent.getStringArrayExtra("user_name")
         val random = (0..2).random()
         customBotMessage("Welcome!\nYou are in conversation with ${botList[random]}, how may I help?\n\n Hint : You can type in 'commands' for the list of functionalities I can assist you with")
     }
@@ -150,5 +153,27 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, login::class.java)
         startActivity(intent)
         finish()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menuitems, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.logout -> {
+                logoutfn(this.scrollView)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+
+        }
+    }
+
+    private fun showFragment() {
+        val bottomSheetFragment = ModalBottomSheetFragment()
+        bottomSheetFragment.show(supportFragmentManager,bottomSheetFragment.tag)
     }
 }
