@@ -36,10 +36,10 @@ class login : AppCompatActivity() {
         }
     }
 
+    //Create new user
     private fun registerUser() {
         val email = etEmailRegister.text.toString()
         val password = etPasswordRegister.text.toString()
-        //musername = usernametype.text.toString()
         if (email.isNotEmpty() && password.isNotEmpty()) {
             CoroutineScope(Dispatchers.IO).launch {
                 try {
@@ -57,6 +57,7 @@ class login : AppCompatActivity() {
         }
     }
 
+    //Login existing user
     private fun loginUser() {
         val email = etEmailLogin.text.toString()
         val password = etPasswordLogin.text.toString()
@@ -77,6 +78,7 @@ class login : AppCompatActivity() {
         }
     }
 
+    //If the current user is logged in, show main activity
     private fun checkLoggedInState() {
         if (auth.currentUser != null) {
             val intent = Intent(this,MainActivity::class.java)

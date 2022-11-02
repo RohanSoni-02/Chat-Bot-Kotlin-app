@@ -14,6 +14,6 @@ class spscreen : AppCompatActivity() {
             val intent = Intent(this,login::class.java)
             startActivity(intent)
             finish()
-        },800)
+        },1000)
     }
 }

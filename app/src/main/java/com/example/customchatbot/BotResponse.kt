@@ -24,6 +24,7 @@ object BotResponse {
                 OPEN_SEARCH
             }
 
+            //Launch gallery
             message.contains("gallery")-> {
                 OPEN_GALLERY
             }
@@ -48,18 +49,21 @@ object BotResponse {
                 }
             }
 
+            //Welcome message
             message.contains("commands") -> {
                 "Greetings!\n -Use the following commands: \n\n 'google' - To launch google \n\n'gallery' - To launch your gallery\n\n 'game'  - To play rock, paper, scissor\n\n 'joke' - To listen to a joke \n\n'time' - Tells you the current time or current date\n\n'solve' - Solves basic arithmetic  problems\n\n'flip a coin' - To flip a coin"
             }
 
+            //Tell a joke
             message.contains("joke") -> {
                 when (random) {
                     0 -> "What is sticky and brown? A stick!"
-                    1 -> "I hate Russian dolls… they're so full of themselves!"
-                    2 -> "What did one plate say to his friend? Tonight, dinner's on me!"
+                    1 -> "What did one plate say to his friend? Tonight, dinner's on me!"
+                    2 -> "Go look in the mirror."
                     else -> "error" }
             }
 
+            //Play a game
             message.contains("game")  -> {
                 "Playing rock, paper, scissors\nI have chosen what to pull \nNow you choose as :\npull 'Your Choice'"
             }
@@ -83,6 +87,7 @@ object BotResponse {
                 }
             }
 
+            //Goodbye
             message.contains("bye") || message.contains("see you")-> {
                 when (random) {
                     0 -> "Bye"
@@ -112,8 +117,7 @@ object BotResponse {
             }
 
 
-
-            //When the programme doesn't understand...
+            //When the command doesnt exist
             else -> {
                 when (random) {
                     0 -> "I don't understand..."

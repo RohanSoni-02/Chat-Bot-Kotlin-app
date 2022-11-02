@@ -7,20 +7,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.customchatbot.Constants.RECEIVE_ID
 import com.example.customchatbot.Constants.SEND_ID
+import kotlinx.android.synthetic.main.msg_item.view.*
+import java.sql.Timestamp
 
 class MessagingAdapter:RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>() {
 
     var messagesList = mutableListOf<Message>()
-
-    inner class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        init{
-            itemView.setOnClickListener {
-                messagesList.removeAt(adapterPosition)
-                notifyItemRemoved(adapterPosition)
-            }
-        }
-
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageViewHolder {
         return MessageViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.msg_item,parent,false))
@@ -52,10 +44,44 @@ class MessagingAdapter:RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>(
         return messagesList.size
     }
 
+    //Create a message 'C'RUD
     fun insertMessage(message: Message){
         this.messagesList.add(message)
         notifyItemInserted(messagesList.size)
         //notifyDataSetChanged()
+    }
+
+    inner class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        init{
+
+            //Update a message CR'U'D
+            itemView.setOnClickListener {
+                val newValue: Message
+                val timeStamp = Timestamp(System.currentTimeMillis())
+                newValue = Message("hey", SEND_ID, timeStamp.time.toString())
+                itemView.tv_message.text = newValue.message
+                val set = messagesList.set(adapterPosition, newValue)
+                notifyItemChanged(adapterPosition)
+                /*
+                val newValue: Message
+                val message = itemView.et_message.text.toString()
+                val timeStamp = Timestamp(System.currentTimeMillis())
+                val newValue = insertMessage(Message(message, SEND_ID, timeStamp.time.toString()))
+                itemView.tv_message.text = newValue.message
+                val set = messagesList.set(adapterPosition, newValue)
+                notifyItemChanged(adapterPosition)
+                 */
+            }
+
+            //Delete a message CRU'D'
+            itemView.setOnLongClickListener{
+                messagesList.removeAt(adapterPosition)
+                notifyItemRemoved(adapterPosition)
+                //Toast.makeText(this,"Messsage deleted", Toast.LENGTH_SHORT).show();
+                true
+            }
+        }
+
     }
 
 }

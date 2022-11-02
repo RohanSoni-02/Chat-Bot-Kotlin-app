@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     val btn_send = findViewById<Button>(R.id.btn_send)
     private lateinit var adapter: MessagingAdapter
     private val botList = listOf("RoSoBot","RohBot","BotSoni")
+    //lateinit var sharedPref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +65,6 @@ class MainActivity : AppCompatActivity() {
         adapter = MessagingAdapter()
         rv_messages.adapter = adapter
         rv_messages.layoutManager = LinearLayoutManager(applicationContext)
-
     }
 
     override fun onStart() {
@@ -110,19 +110,21 @@ class MainActivity : AppCompatActivity() {
                 //Scrolls us to the position of the latest message
                 rv_messages.scrollToPosition(adapter.itemCount - 1)
 
-                //Starts Google
                 when (response) {
+                    //Launch Google
                     OPEN_GOOGLE -> {
                         val site = Intent(Intent.ACTION_VIEW)
                         site.data = Uri.parse("https://www.google.com/")
                         startActivity(site)
                     }
+                    //Search anything on the web
                     OPEN_SEARCH -> {
                         val site = Intent(Intent.ACTION_VIEW)
                         val searchTerm: String? = message.substringAfterLast("search")
                         site.data = Uri.parse("https://www.google.com/search?&q=$searchTerm")
                         startActivity(site)
                     }
+                    //Launch Gallery
                     OPEN_GALLERY -> {
                         val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                         intent.type = "image/* video/*"
@@ -134,20 +136,30 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Bot reply message with receive_id
     private fun customBotMessage(message: String) {
 
         GlobalScope.launch {
             delay(1000)
             withContext(Dispatchers.Main) {
                 val timeStamp = Time.timeStamp()
-                //messagesList.add(Message(message, RECEIVE_ID, timeStamp))
                 adapter.insertMessage(Message(message, RECEIVE_ID, timeStamp))
-
                 rv_messages.scrollToPosition(adapter.itemCount - 1)
             }
         }
     }
 
+    //Save messages
+    /*
+   fun savedData(item:Message){
+       sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)?: return
+       with(sharedPref.edit()){
+           putString("MESSAGE", item.message)
+       }
+   }
+    */
+
+    //Logout user
     fun logoutfn(view: android.view.View) {
         FirebaseAuth.getInstance().signOut()
         val intent = Intent(this, login::class.java)
@@ -155,6 +167,7 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
+    //Logout button
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.menuitems, menu)
@@ -172,6 +185,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Modal bottom sheet fragment presented at the start of main activity
     private fun showFragment() {
         val bottomSheetFragment = ModalBottomSheetFragment()
         bottomSheetFragment.show(supportFragmentManager,bottomSheetFragment.tag)
