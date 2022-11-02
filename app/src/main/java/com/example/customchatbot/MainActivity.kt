@@ -20,6 +20,7 @@ import kotlinx.coroutines.*
 class MainActivity : AppCompatActivity() {
     val rv_messages = findViewById<RecyclerView>(R.id.rv_messages)
     val et_message = findViewById<TextView>(R.id.et_message)
+    val btn_send = findViewById<Button>(R.id.btn_send)
     private lateinit var adapter: MessagingAdapter
     private val botList = listOf("RoSoBot","RohBot","BotSoni")
 
@@ -38,7 +39,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun clickEvents() {
 
-        val btn_send = findViewById<Button>(R.id.btn_send)
         //Send a message
         btn_send.setOnClickListener {
             sendMessage()
@@ -147,7 +147,7 @@ class MainActivity : AppCompatActivity() {
 
     fun logoutfn(view: android.view.View) {
         FirebaseAuth.getInstance().signOut()
-        val intent = Intent(this,login::class.java)
+        val intent = Intent(this, login::class.java)
         startActivity(intent)
         finish()
     }

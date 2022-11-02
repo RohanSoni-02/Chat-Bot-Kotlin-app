@@ -15,6 +15,12 @@ import kotlinx.coroutines.withContext
 
 class login : AppCompatActivity() {
     lateinit var auth: FirebaseAuth
+    val etEmailRegister = findViewById<TextView>(R.id.etEmailRegister)
+    val etPasswordRegister = findViewById<TextView>(R.id.etPasswordRegister)
+    val etEmailLogin = findViewById<TextView>(R.id.etEmailLogin)
+    val etPasswordLogin = findViewById<TextView>(R.id.etPasswordLogin)
+    val btnRegister = findViewById<Button>(R.id.btnRegister)
+    val btnLogin = findViewById<Button>(R.id.btnLogin)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,19 +28,15 @@ class login : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        val btnRegister = findViewById<Button>(R.id.btnRegister)
         btnRegister.setOnClickListener {
             registerUser()
         }
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
             loginUser()
         }
     }
 
     private fun registerUser() {
-        val etEmailRegister = findViewById<TextView>(R.id.etEmailRegister)
-        val etPasswordRegister = findViewById<TextView>(R.id.etPasswordRegister)
         val email = etEmailRegister.text.toString()
         val password = etPasswordRegister.text.toString()
         //musername = usernametype.text.toString()
@@ -56,8 +58,6 @@ class login : AppCompatActivity() {
     }
 
     private fun loginUser() {
-        val etEmailLogin = findViewById<TextView>(R.id.etEmailLogin)
-        val etPasswordLogin = findViewById<TextView>(R.id.etPasswordLogin)
         val email = etEmailLogin.text.toString()
         val password = etPasswordLogin.text.toString()
         if (email.isNotEmpty() && password.isNotEmpty()) {
@@ -90,6 +90,4 @@ class login : AppCompatActivity() {
         super.onStart()
         checkLoggedInState()
     }
-
-
 }

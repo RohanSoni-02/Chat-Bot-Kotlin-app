@@ -101,6 +101,7 @@ object BotResponse {
                 date.toString()
             }
 
+
             //Hello
             message.contains("hello") || message.contains("greetings") || message.contains("hi")  -> {
                 when (random) {
@@ -109,6 +110,8 @@ object BotResponse {
                     2 -> "Bonjour!"
                     else -> "error" }
             }
+
+
 
             //When the programme doesn't understand...
             else -> {
