@@ -49,7 +49,7 @@ object BotResponse {
             }
 
             message.contains("commands") -> {
-                "Greetings!\n -Use the following commands: \n 'google' - To launch google \n\n'gallery' - To launch your gallery\n\n 'game'  - To play rock, paper, scissor\n\n 'joke' - To listen to a joke \n\n'time' - Tells you the current time \n'date' - Tells you the current date\n\n'solve' - Solves basic arithmetic  problems\n\n'flip a coin' - To flip a coin"
+                "Greetings!\n -Use the following commands: \n\n 'google' - To launch google \n\n'gallery' - To launch your gallery\n\n 'game'  - To play rock, paper, scissor\n\n 'joke' - To listen to a joke \n\n'time' - Tells you the current time or current date\n\n'solve' - Solves basic arithmetic  problems\n\n'flip a coin' - To flip a coin"
             }
 
             message.contains("joke") -> {
