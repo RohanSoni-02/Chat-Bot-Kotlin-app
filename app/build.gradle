@@ -46,6 +46,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
 
+    //animation
+    implementation 'com.airbnb.android:lottie:3.7.0'
+
     //RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
