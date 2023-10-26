@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="blue">#FF33B5E5</color>
+    <color name="colorAccent">#FF7043</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#151515</color>
+    <color name="customeblue">#3b5998</color>
+    <color name="darkblue">#FF0099CC</color>
+    <color name="darkgreen">#669900</color>
+    <color name="darkorange">#FFFF8800</color>
+    <color name="darkpurple">#FF9933CC</color>
+    <color name="darkred">#FFCC0000</color>
+    <color name="green">#99cc00</color>
+    <color name="ic_launcherz_background">#3DDC84</color>
+    <color name="lowDarkfont">#5D070E07</color>
+    <color name="orange">#FFFFBB33</color>
+    <color name="purple">#FFAA66CC</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red">#FFFF4444</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whiteback">#f9f9f9</color>
+    <color name="whitebackground">#d4d3d3</color>
+    <string name="app_name">CustomChatBot</string>
+    <string name="default_web_client_id" translatable="false">99038071428-n1su9cg08dvdm0bfejsp8bv86qjfouf3.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">99038071428</string>
+    <string name="google_api_key" translatable="false">AIzaSyDhEbi3lgpMPRqbV-WjguoxBsJA2w66eVU</string>
+    <string name="google_app_id" translatable="false">1:99038071428:android:fa03b6aecac378d86b90d1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDhEbi3lgpMPRqbV-WjguoxBsJA2w66eVU</string>
+    <string name="google_storage_bucket" translatable="false">customchatbot-4fb53.appspot.com</string>
+    <string name="project_id" translatable="false">customchatbot-4fb53</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:statusBarColor">#fff</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:navigationBarColor">#000000</item>
+
+        <item name="actionBarStyle">@style/MyActionBar</item>
+
+    </style>
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/MyTitleTextStyle</item>
+    </style>
+    <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#BA0F49</item>
+    </style>
+</resources>

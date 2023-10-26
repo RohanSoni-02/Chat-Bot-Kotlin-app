@@ -1,0 +1,134 @@
+[
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.customchatbot.app-pngs-30:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable-v24_center.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/drawable-v24/center.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable_prcs.png.flat",
+        "source": "com.example.customchatbot.app-main-37:/drawable/prcs.png"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable_slabrev.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/drawable/slabrev.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/layout_activity_main.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/layout_activity_login.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable_slab.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/drawable/slab.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-anydpi-v26_ic_launcherz.png.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-anydpi-v26/ic_launcherz.png"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/xml_backup_rules.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/layout_activity_spscreen.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/layout/activity_spscreen.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable_splashimg.jpg.flat",
+        "source": "com.example.customchatbot.app-main-37:/drawable/splashimg.jpg"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/raw_robot.json.flat",
+        "source": "com.example.customchatbot.app-main-37:/raw/robot.json"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/menu_menuitems.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/menu/menuitems.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-xxxhdpi_ic_launcherz_round.png.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-xxxhdpi/ic_launcherz_round.png"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/layout_msg_item.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/layout/msg_item.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable_chatbot.png.flat",
+        "source": "com.example.customchatbot.app-main-37:/drawable/chatbot.png"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/layout_fragment_modal_bottom_sheet.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/layout/fragment_modal_bottom_sheet.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable_blob.xml.flat",
+        "source": "com.example.customchatbot.app-main-37:/drawable/blob.xml"
+    },
+    {
+        "merged": "com.example.customchatbot.app-merged_res-35:/drawable-v24_logout.png.flat",
+        "source": "com.example.customchatbot.app-main-37:/drawable-v24/logout.png"
+    }
+]
