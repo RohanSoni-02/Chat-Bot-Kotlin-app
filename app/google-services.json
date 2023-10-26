@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "99038071428",
+    "project_id": "customchatbot-4fb53",
+    "storage_bucket": "customchatbot-4fb53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99038071428:android:fa03b6aecac378d86b90d1",
+        "android_client_info": {
+          "package_name": "com.example.customchatbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99038071428-n1su9cg08dvdm0bfejsp8bv86qjfouf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhEbi3lgpMPRqbV-WjguoxBsJA2w66eVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99038071428-n1su9cg08dvdm0bfejsp8bv86qjfouf3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
